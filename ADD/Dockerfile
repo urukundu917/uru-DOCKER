@@ -2,7 +2,7 @@
 FROM almalinux:9
 
 # Installs nginx and cleans up package cache to reduce image size
-RUN dnf install nginx -y \
+RUN dnf install nginx -y
 RUN rm -rf /usr/share/nginx/html/*
 
 # Sets environment variables inside the container
