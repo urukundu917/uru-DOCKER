@@ -12,5 +12,6 @@ CMD ["nginx", "-g", "daemon off;"]
 LABEL Author="uru" \
       Name="Frontend" \
       Version="1.0.0"
+      
 
 
