@@ -9,8 +9,8 @@ RUN dnf install nginx -y \
 CMD ["nginx", "-g", "daemon off;"]
 
 #Adds metadata to the image
-LABEL Auther="uru" \
-      Version="1.0" \
-      Name:"Frontend"
+LABEL Author="uru" \
+      Name="Frontend" \
+      Version="1.0.0"
 
 
