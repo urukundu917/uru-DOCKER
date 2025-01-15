@@ -4,7 +4,6 @@ FROM almalinux:9
 #Executes commands in the container during the build stage
 RUN dnf install nginx -y \
 && systemctl enable nginx \
-RUN rm -rf /usr/share/nginx/html/*
 
 #Specifies the command to run when the container starts. It is overridden if a command is provided during docker run
 CMD ["nginx", "-g", "daemon off;"]
@@ -24,3 +23,5 @@ COPY expense.conf /etc/nginx/default.d
 
 #Copies files/directories from the host or a URL to the image. Unlike COPY, it can extract archives.
 ADD https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip /usr/share/nginx/html
+
+RUN rm -rf /usr/share/nginx/html/*
