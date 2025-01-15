@@ -22,6 +22,4 @@ ENV APP_ENV=production
 COPY expense.conf /etc/nginx/default.d
 
 #Copies files/directories from the host or a URL to the image. Unlike COPY, it can extract archives.
-ADD https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip /usr/share/nginx/html
-
-RUN rm -rf /usr/share/nginx/html/*
+ADD /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip /usr/share/nginx/html
