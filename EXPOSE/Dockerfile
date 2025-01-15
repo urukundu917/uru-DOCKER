@@ -12,6 +12,7 @@ CMD ["nginx", "-g", "daemon off;"]
 LABEL Author="uru" \
       Name="Frontend" \
       Version="1.0.0"
-      
+#Documents the port on which the container listens (EXPOSE instruction will not effect functionality it will only gives information)
+EXPOSE 80
 
 
