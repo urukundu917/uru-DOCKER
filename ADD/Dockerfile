@@ -5,6 +5,8 @@ FROM almalinux:9
 RUN dnf install nginx -y \
 && systemctl enable nginx \
 
+RUN rm -rf /usr/share/nginx/html/*
+
 #Specifies the command to run when the container starts. It is overridden if a command is provided during docker run
 CMD ["nginx", "-g", "daemon off;"]
 
