@@ -29,6 +29,7 @@ EXPOSE 80
 RUN useradd urukundu
 
 # USER sets the user for running commands in the container to improve security
+#For security you shoud not run container run as a root user, It must be normal user, at least your last instruction should be USER <normla-user>
 # Any following instructions run as "urukundu"
 
 USER urukundu
