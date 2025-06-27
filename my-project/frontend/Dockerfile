@@ -15,5 +15,6 @@ RUN rm -rf /etc/nginx/nginx.conf && \
 WORKDIR /usr/share/nginx/html
 ADD code .
 # COPY expense.conf /etc/nginx/default.d
+COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 8080
 CMD [ "nginx", "-g", "daemon off;" ]
